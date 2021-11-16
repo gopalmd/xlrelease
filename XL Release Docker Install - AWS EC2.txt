@@ -1,0 +1,33 @@
+sudo yum update -y
+
+sudo amazon-linux-extras install docker
+
+sudo service docker start
+
+sudo usermod -a -G docker ec2-user
+
+sudo chkconfig docker on
+
+docker info
+
+
+docker run -e "ADMIN_PASSWORD=Server@2009" -e "ACCEPT_EULA=Y" -p 5516:5516 --name xlr xebialabs/xl-release:10.2
+
+
+Stop the container(s) using the following command:
+docker-compose down
+
+Delete all containers using the following command:
+docker rm -f $(docker ps -a -q)
+
+Delete all volumes using the following command:
+docker volume rm $(docker volume ls -q)
+
+Restart the containers using the following command:
+docker-compose up -d
+
+docker images
+
+docker images ls
+
+19@nKara@123
