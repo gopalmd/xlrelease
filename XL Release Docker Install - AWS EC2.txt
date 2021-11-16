@@ -29,5 +29,3 @@ docker-compose up -d
 docker images
 
 docker images ls
-
-19@nKara@123
