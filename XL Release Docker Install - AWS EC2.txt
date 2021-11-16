@@ -29,3 +29,10 @@ docker-compose up -d
 docker images
 
 docker images ls
+
+
+View All Containers
+docker ps -a
+
+To Start Containers
+docker start a1b2df84baa4
