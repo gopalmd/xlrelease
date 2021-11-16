@@ -1,3 +1,7 @@
+===========================================================================================
+Install Docker On AWS EC2 instance
+===========================================================================================
+
 sudo yum update -y
 
 sudo amazon-linux-extras install docker
@@ -10,9 +14,15 @@ sudo chkconfig docker on
 
 docker info
 
+===========================================================================================
+Run XL Release Docker Container
+===========================================================================================
 
 docker run -e "ADMIN_PASSWORD=Server@2009" -e "ACCEPT_EULA=Y" -p 5516:5516 --name xlr xebialabs/xl-release:10.2
 
+===========================================================================================
+Some Docker Commands
+===========================================================================================
 
 Stop the container(s) using the following command:
 docker-compose down
@@ -30,13 +40,31 @@ docker images
 
 docker images ls
 
+===========================================================================================
 
-View All Containers
-docker ps -a
-
-To Start Containers
-
-docker start <container id>
+docker start <container id> // To Start Containers
 
 docker start a1b2df84baa4
+
+===========================================================================================
+
+docker ps //To show only running containers
+
+docker ps -a //To show all containers
+
+docker ps -l //To show the latest created container
+
+docker ps -n=-1  //To show n last created containers
+
+docker ps -s  //To display total file sizes
+
+===========================================================================================
+
+In the new version of Docker, commands are updated, and some management commands are added:
+
+docker container ls //To list all the running containers.
+
+docker container ls -a //To clean them all,
+
+docker rm $(docker ps -aq) //To list all the containers created irrespective of its state.
 
