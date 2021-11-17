@@ -11,3 +11,5 @@ https://docs.xebialabs.com/v.10.2/release/docker/single-node-docker-deployments/
 https://hub.docker.com/r/xebialabs/xl-deploy
 
 https://hub.docker.com/r/xebialabs/xl-release/
+
+https://legacydocs.xebialabs.com/community/
