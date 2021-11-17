@@ -12,6 +12,8 @@ sudo usermod -a -G docker ec2-user
 
 sudo chkconfig docker on
 
+//Reboot the EC2 instance
+
 docker info
 
 ===========================================================================================
@@ -67,4 +69,9 @@ docker container ls //To list all the running containers.
 docker container ls -a //To clean them all,
 
 docker rm $(docker ps -aq) //To list all the containers created irrespective of its state.
+
+
+==========================================================================================
+
+docker-compose up -d
 

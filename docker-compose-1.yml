@@ -1,0 +1,21 @@
+version: "2"
+services:
+  xld:
+    image: xebialabs/xl-deploy:10.2
+    container_name: xld
+    ports:
+      - "4516:4516"
+    environment:
+      - ADMIN_PASSWORD=Server@2009
+      - ACCEPT_EULA=Y
+
+  xlr:
+    image: xebialabs/xl-release:10.2
+    container_name: xlr
+    ports:
+      - "5516:5516"
+    links:
+      - xld
+    environment:
+      - ADMIN_PASSWORD=Server@2009
+      - ACCEPT_EULA=Y
