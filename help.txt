@@ -1,0 +1,7 @@
+Login to  docker containers
+
+https://ligerlearn.com/how-to-edit-files-within-docker-containers/
+
+docker exec -it <container id> /bin/bash
+
+docker exec -it c460 /bin/bash
