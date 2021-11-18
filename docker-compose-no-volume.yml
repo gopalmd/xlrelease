@@ -1,8 +1,8 @@
 version: "2"
 services:
-  xld:
+  xl-deploy:
     image: xebialabs/xl-deploy:10.2
-    container_name: xld
+    container_name: xl-deploy
     ports:
       - "4516:4516"
     volumes:
@@ -13,13 +13,13 @@ services:
       - ADMIN_PASSWORD=Server@2009
       - ACCEPT_EULA=Y
 
-  xlr:
+  xl-release:
     image: xebialabs/xl-release:10.2
-    container_name: xlr
+    container_name: xl-release
     ports:
       - "5516:5516"
     links:
-      - xld
+      - xl-deploy
     volumes:
       - ~/XebiaLabs/xl-release-server/conf:/opt/xebialabs/xl-release-server/conf
       - ~/XebiaLabs/xl-release-server/hotfix/:/opt/xebialabs/xl-release-server/hotfix/
