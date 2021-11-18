@@ -9,6 +9,11 @@ services:
       - ~/XebiaLabs/xl-deploy-server/conf:/opt/xebialabs/xl-deploy-server/conf
       - ~/XebiaLabs/xl-deploy-server/hotfix/lib:/opt/xebialabs/xl-deploy-server/hotfix/lib
       - ~/XebiaLabs/xl-deploy-server/hotfix/plugins:/opt/xebialabs/xl-deploy-server/hotfix/plugins
+      - ~/XebiaLabs/xl-deploy-server/ext:/opt/xebialabs/xl-deploy-server/ext
+      - ~/XebiaLabs/xl-deploy-server/plugins:/opt/xebialabs/xl-deploy-server/plugins
+      - ~/XebiaLabs/xl-deploy-server/repository:/opt/xebialabs/xl-deploy-server/repository
+      - ~/XebiaLabs/xl-deploy-server/repository:/opt/xebialabs/xl-deploy-server/export
+      - ~/XebiaLabs/xl-deploy-server/repository:/opt/xebialabs/xl-deploy-server/work
     environment:
       - ADMIN_PASSWORD=Server@2009
       - ACCEPT_EULA=Y
@@ -23,6 +28,11 @@ services:
     volumes:
       - ~/XebiaLabs/xl-release-server/conf:/opt/xebialabs/xl-release-server/conf
       - ~/XebiaLabs/xl-release-server/hotfix/:/opt/xebialabs/xl-release-server/hotfix/
+      - ~/XebiaLabs/xl-release-server/ext:/opt/xebialabs/xl-release-server/ext
+      - ~/XebiaLabs/xl-release-server/plugins:/opt/xebialabs/xl-release-server/plugins
+      - ~/XebiaLabs/xl-release-server/repository:/opt/xebialabs/xl-release-server/repository
+      - ~/XebiaLabs/xl-release-server/archive:/opt/xebialabs/xl-release-server/archive
+      - ~/XebiaLabs/xl-release-server/archive:/opt/xebialabs/xl-release-server/reports
     environment:
       - ADMIN_PASSWORD=Server@2009
       - ACCEPT_EULA=Y
