@@ -5,10 +5,6 @@ services:
     container_name: xl-deploy
     ports:
       - "4516:4516"
-    volumes:
-      - ~/XebiaLabs/xl-deploy-server/conf:/opt/xebialabs/xl-deploy-server/conf
-      - ~/XebiaLabs/xl-deploy-server/hotfix/lib:/opt/xebialabs/xl-deploy-server/hotfix/lib
-      - ~/XebiaLabs/xl-deploy-server/hotfix/plugins:/opt/xebialabs/xl-deploy-server/hotfix/plugins
     environment:
       - ADMIN_PASSWORD=Server@2009
       - ACCEPT_EULA=Y
@@ -20,9 +16,6 @@ services:
       - "5516:5516"
     links:
       - xl-deploy
-    volumes:
-      - ~/XebiaLabs/xl-release-server/conf:/opt/xebialabs/xl-release-server/conf
-      - ~/XebiaLabs/xl-release-server/hotfix/:/opt/xebialabs/xl-release-server/hotfix/
     environment:
       - ADMIN_PASSWORD=Server@2009
       - ACCEPT_EULA=Y
