@@ -7,6 +7,7 @@ https://docs.xebialabs.com/v.10.2/deploy/docker/getting-started-with-xl-docker-c
 
 https://docs.xebialabs.com/v.10.2/release/docker/single-node-docker-deployments/#single-node-deploy-and-release-deployment
 
+https://docs.xebialabs.com/v.9.8/release/docker/manage-volumes-in-docker/
 
 https://hub.docker.com/r/xebialabs/xl-deploy
 
